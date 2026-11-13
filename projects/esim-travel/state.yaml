@@ -1,0 +1,148 @@
+step:
+  n: 6
+  name: after-decision
+done:
+  ingest:S-001:17057da15899:
+    at: '2026-11-13T21:26:16+03:00'
+    kind: table
+  ingest:S-002:4a2202c93ddc:
+    at: '2026-11-13T21:26:31+03:00'
+    kind: pdf
+  ingest:S-003:148a2767363c:
+    at: '2026-11-13T21:26:33+03:00'
+    kind: html
+  ingest:S-004:1854d82fc30a:
+    at: '2026-11-13T21:26:34+03:00'
+    kind: html
+  ingest:S-005:e9ad056e3e4d:
+    at: '2026-11-13T21:34:06+03:00'
+    kind: reviews
+  ingest:S-006:a3bb7791d3b0:
+    at: '2026-11-13T21:34:07+03:00'
+    kind: reviews
+  ingest:S-007:84c63ca216b2:
+    at: '2026-11-13T21:34:29+03:00'
+    kind: html
+  ingest:S-008:f5cf07c4373d:
+    at: '2026-11-13T21:34:31+03:00'
+    kind: html
+  ingest:S-009:401237c94add:
+    at: '2026-11-13T21:34:34+03:00'
+    kind: html
+  extract:S-002:part-01:7d01d7f10b66:
+    at: '2026-11-13T21:38:10+03:00'
+    part: 1
+    claims: 5
+  extract:S-002:part-02:aec4b5e7e4e7:
+    at: '2026-11-13T21:38:32+03:00'
+    part: 2
+    claims: 15
+  extract:S-003:part-01:886657f4afdf:
+    at: '2026-11-13T21:38:46+03:00'
+    part: 1
+    claims: 18
+  extract:S-004:part-01:b8f5b5b69c1e:
+    at: '2026-11-13T21:39:01+03:00'
+    part: 1
+    claims: 18
+  extract:S-005:part-01:a33686c34b82:
+    at: '2026-11-13T21:39:30+03:00'
+    part: 1
+    claims: 25
+  extract:S-006:part-01:7f44855d1f39:
+    at: '2026-11-13T21:39:41+03:00'
+    part: 1
+    claims: 7
+  extract:S-007:part-01:c607c96c9462:
+    at: '2026-11-13T21:39:46+03:00'
+    part: 1
+    claims: 6
+  extract:S-008:part-01:28f2ebdec3a4:
+    at: '2026-11-13T21:40:05+03:00'
+    part: 1
+    claims: 11
+  extract:S-009:part-01:6297ba1b77e0:
+    at: '2026-11-13T21:40:36+03:00'
+    part: 1
+    claims: 27
+  critic:options:9cceabb66e2f:
+    at: '2026-11-13T21:57:09+03:00'
+    path: critique.md
+  critic:promises:2ad559823afc:
+    at: '2026-11-13T22:10:32+03:00'
+    verdicts:
+      P-1:
+        feature: F-1
+        verdict: partial
+        note: F-1 покрывает пакеты eSIM для Турции, но функция запланирована на 2027-Q2
+      P-2:
+        feature: F-2
+        verdict: partial
+        note: F-2 покрывает проверку совместимости телефона с eSIM, но функция запланирована
+          на 2027-Q2
+      P-3:
+        feature: F-3
+        verdict: partial
+        note: F-3 покрывает возврат денег, если eSIM не заработала, но функция запланирована
+          на 2027-Q2
+      P-4:
+        feature: F-4
+        verdict: partial
+        note: F-4 покрывает поддержку на русском 24/7, но функция запланирована на
+          2027-Q2
+      P-5:
+        feature: F-5
+        verdict: partial
+        note: F-5 покрывает предложение eSIM рядом с роумингом в приложении, но функция
+          запланирована на 2027-Q2
+      P-6:
+        feature: F-6
+        verdict: partial
+        note: F-6 покрывает отображение остатка трафика в приложении, но функция запланирована
+          на 2027-Q2
+  critic:promises:0346202286d3:
+    at: '2026-11-13T22:10:45+03:00'
+    verdicts:
+      P-1:
+        feature: F-1
+        verdict: ok
+        note: ''
+      P-2:
+        feature: F-2
+        verdict: ok
+        note: ''
+      P-3:
+        feature: F-3
+        verdict: ok
+        note: ''
+      P-4:
+        feature: F-4
+        verdict: ok
+        note: ''
+      P-5:
+        feature: F-5
+        verdict: ok
+        note: ''
+      P-6:
+        feature: F-6
+        verdict: ok
+        note: ''
+waiting: null
+human:
+- point: точка 1
+  summary: Постановка и 6 вопросов подтверждены без правок; Q3 при отсутствии открытых
+    данных — пробел
+  minutes: 3.0
+  at: '2026-11-13T21:26:10+03:00'
+- point: точка 2
+  summary: O3 + элементы O5 (проверка совместимости до оплаты, возврат); Египет после
+    проверки цен
+  minutes: 5.0
+  at: '2026-11-13T22:08:49+03:00'
+- point: точка 3
+  summary: Стратегия принята; сроки F-1…F-6 (2027-05-01) подтверждены как предложение
+    для пилота
+  minutes: 6.0
+  at: '2026-11-13T22:37:07+03:00'
+degraded: []
+created: '2026-11-13T21:21:18+03:00'

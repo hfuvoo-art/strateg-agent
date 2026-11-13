@@ -1,0 +1,30 @@
+# Паттерны инъекций в источниках: по ним ingest.py помечает абзацы как suspicious (источник не бракуется); без них команды из чужих текстов проходят незамеченными.
+# Применяются с re.IGNORECASE | re.MULTILINE. Абзац помечается, если сработал любой паттерн.
+patterns:
+  - id: ignore-en
+    pattern: '\b(?:(?:ignore|disregard)\b[^.\n]{0,40}\b(?:previous|prior|above|earlier|all|system|your)\b|forget\b)[^.\n]{0,40}\b(?:instructions?|prompts?|rules?)\b'
+    note: "ignore/forget ... instructions"
+  - id: ignore-ru
+    pattern: '\b(?:игнорир\w*|забудь\w*|отмени\w*|не\s+учитывай)\b[^.\n]{0,50}\b(?:инструкци\w*|правил\w*|указани\w*|промпт\w*)'
+    note: "игнорируй ... инструкции"
+  - id: delete-run-ru
+    pattern: '\b(?:удали|удалите|сотри|сотрите|выполни|выполните)\b[^.\n]{0,50}(?:\brules/|\bAGENTS|\bCLAUDE|\bplaybooks|\bprompts/)'
+    note: "удали/выполни ... rules/AGENTS/команд"
+  - id: delete-run-en
+    pattern: '\b(?:delete|remove|erase|modify)\b[^.\n]{0,40}(?:\brules/|\bAGENTS|\bCLAUDE|\bplaybooks)'
+    note: "delete/run ... rules/AGENTS/commands"
+  - id: recommend-variant
+    pattern: '\b(?:рекоменду(?:й|йте)|выбери|выберите|предпочти|предпочтите)\b[^.\n]{0,40}\bвариант\w*|\brecommend\s+(?:option|variant)\b'
+    note: "рекомендуй ... вариант"
+  - id: role-prefix
+    pattern: '^\s*(?:system|assistant|developer)\s*:(?!\s*(?:android|ios|ipados|windows|macos|linux|ubuntu|harmonyos|hyperos|miui|tizen|watchos|tvos|wear\s*os|chrome\s*os|kaios)\b)'
+    note: "строка начинается с роли (кроме названий ОС)"
+  - id: shell-download
+    pattern: '\b(?:curl|wget)\b[^\n]{0,60}https?://'
+    note: "curl/wget http"
+  - id: rm-rf
+    pattern: '\brm\s+-(?:rf|fr)\b'
+    note: "rm -rf"
+  - id: exfil
+    pattern: '\b(?:send|print|reveal|show|leak|upload|отправь\w*|покажи\w*|выведи\w*|раскрой\w*)\b[^.\n]{0,60}(?:\.env\b|\bapi[\s_-]?keys?\b|\bsystem\s+prompt\b|\bAPI-ключ\w*|\bсистемн\w+\s+промпт\w*)'
+    note: "вынести .env / ключ / системный промпт"

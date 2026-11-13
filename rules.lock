@@ -1,0 +1,140 @@
+files:
+  rules/evidence.md: c78bc82a50679f20c2de0d053ccae05b9df8e8dbc45266f9199315d36cec83be
+  rules/injection-patterns.yaml: f2365724b23a9a3a863bfa55307b57026db2c80f6e2db441e30ce094f341bfc6
+  rules/safety.md: a073aaf1e3e8538400d884995b446de92a1d68fd68f29e1458100da23ef48f75
+  rules/style.md: 40a3fd8ce0ce9cf53bbed4ff49d893e04d4a7389a285ca072e8cd0cd58dde40a
+  prompts/critic-claims.md: 5bb34278fa85550fb258e39160c5f16d469b95476e8f35542d9da0c24c7e3ceb
+  prompts/critic-promises.md: a8c60e5984a656fb4e73340aa7ffc80696bc3dbad4e21735a3a4845795c03977
+  prompts/critic.md: b6f361ff7d37a302dbd3ec8e033a83968e174a8305b79497e77b342233cdc91c
+  prompts/extract.md: daf0c6f1386b683624ab0e96b75ffea6238109d18ae4ce55f403bb1ada19c160
+  prompts/interview-coding.md: 775efdb80287943424b320670a3239a7f83f11500febdd97d30acfa81613f4f9
+  prompts/respondent.md: 3d0eca4e4601a50118c1d22ed470143f12ac61a7daf9aa40e3c42cd042d34161
+  methods/framing.md: 0fccba83457d4db6ca902f2a4415149afa32538bd3660d1d35ada575e6e80fe8
+  methods/interview-guide.md: 3edcb81d18e7b78511722007b3091712ca15cd56f40f9f9a4c5e784344f03804
+  methods/jtbd.md: 27e4b19e36ae4e7895c87de57d215f142c3aa5f0ee36389940b127fba3925ec1
+  methods/options-premortem.md: 58b0dd0ec25b376f00bef203e1cdae9d8749ae50e242e7eb9837c64e444a25bb
+  methods/positioning.md: 0f174c8176e746ede50b16f87ef2433fb6791274cf2d64b538d7c3529373b037
+  methods/test-plan.md: 8077f54e7fd586139a85ac6f129477f2e36e4756e7a2057b733e6a3a647c59ee
+  methods/unit-economics.md: 4bceea178cd170cbde836720ab01409bc3e53682040d4b2bedc5f5edc839f569
+  methods/ux-review.md: b568d2ead2066f4e17637cc6afe4e407fda624e750f27686068ddaf4bc7dd5eb
+  AGENTS.md: 8d6dd0501c611ced4f990b9ed002f6ac3a4f42b6e43c0db557575c089c4c6ab0
+  CLAUDE.md: 336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49
+  tools/check.py: a8d71decf8aeab5532130330a115c1504927db4dfe9962d378927be126e6632d
+  tools/lock.py: 3dc00d2620a76f2b6aa6cfd6d85b80d129dcfc6bbf26931124c4b6e378a3ff54
+history:
+- updated_at: '2026-11-09T19:38:15+03:00'
+  reason: 'задача 9: правила, промпты, rules.lock'
+  changed:
+  - AGENTS.md
+  - prompts/critic-claims.md
+  - prompts/critic-promises.md
+  - prompts/critic.md
+  - prompts/extract.md
+  - prompts/interview-coding.md
+  - prompts/respondent.md
+  - rules/evidence.md
+  - rules/injection-patterns.yaml
+  - rules/safety.md
+  - rules/style.md
+  - tools/check.py
+  - tools/lock.py
+- updated_at: '2026-11-09T19:51:43+03:00'
+  reason: 'red-team после задачи 9: methods/ и CLAUDE.md под замок'
+  changed:
+  - tools/lock.py
+  - CLAUDE.md
+  - methods/framing.md
+  - methods/interview-guide.md
+  - methods/jtbd.md
+  - methods/options-premortem.md
+  - methods/positioning.md
+  - methods/test-plan.md
+  - methods/unit-economics.md
+  - methods/ux-review.md
+- updated_at: '2026-11-09T20:06:19+03:00'
+  reason: 'задача 9a: AGENTS.md v1, playbooks, приёмка methods'
+  changed:
+  - AGENTS.md
+- updated_at: '2026-11-09T20:09:03+03:00'
+  reason: 'задача 9a, ревью: убран user-fact без ключа, флаги -p, --write; playbooks
+    под замок не берём (правила процесса — в AGENTS.md)'
+  changed:
+  - AGENTS.md
+- updated_at: '2026-11-10T18:53:03+03:00'
+  reason: 'У16 пересмотрено 12.11: ключ — основной путь, без ключа — запасной'
+  changed:
+  - AGENTS.md
+- updated_at: '2026-11-10T19:02:20+03:00'
+  reason: 'задача 10: оценка источника — fact с цитатой, estimate только расчёт'
+  changed:
+  - prompts/extract.md
+- updated_at: '2026-11-10T19:21:05+03:00'
+  reason: 'задачи 10 и 14: extract.py и status.py в AGENTS.md, строки убраны из Временных
+    замен'
+  changed:
+  - AGENTS.md
+- updated_at: '2026-11-10T19:08:35+03:00'
+  reason: 'задача 13: check.py 5–10'
+  changed:
+  - tools/check.py
+- updated_at: '2026-11-10T19:17:48+03:00'
+  reason: 'задача 13: правки по ревью'
+  changed:
+  - tools/check.py
+- updated_at: '2026-11-11T17:08:24+03:00'
+  reason: 'задача 13: правки по ревью, круг 2'
+  changed:
+  - tools/check.py
+- updated_at: '2026-11-11T17:11:46+03:00'
+  reason: 'задача 13: правки по ревью, круг 2 (оркестратор): waiting строкой, пропуск
+    только для неначатого документа'
+  changed:
+  - tools/check.py
+- updated_at: '2026-11-11T17:12:41+03:00'
+  reason: 'задача 13: check.py 5–10 в AGENTS.md, строка убрана из Временных замен;
+    поле respondent в interview-guide'
+  changed:
+  - AGENTS.md
+  - methods/interview-guide.md
+- updated_at: '2026-11-11T17:16:26+03:00'
+  reason: 'задача 11: critic.md — поле reconsider (что заставит передумать) и блоки
+    данных'
+  changed:
+  - prompts/critic.md
+- updated_at: '2026-11-11T17:20:43+03:00'
+  reason: 'задачи 11 и 12: critic.py, respond.py, ingest --reviews в AGENTS.md, строки
+    убраны из Временных замен'
+  changed:
+  - AGENTS.md
+- updated_at: '2026-11-11T17:44:25+03:00'
+  reason: 'задача 14a: export.py в AGENTS.md, строка export убрана из «Временных замен»'
+  changed:
+  - AGENTS.md
+- updated_at: '2026-11-11T22:50:16+03:00'
+  reason: 'подготовка КТ-A: state.py step/wait/resolve в AGENTS.md'
+  changed:
+  - AGENTS.md
+- updated_at: '2026-11-11T22:54:04+03:00'
+  reason: 'подготовка КТ-A: methods — точки через state.py resolve'
+  changed:
+  - AGENTS.md
+  - methods/framing.md
+  - methods/options-premortem.md
+- updated_at: '2026-11-13T22:47:08+03:00'
+  reason: 'КТ-A: учёт поиска (хук в Claude Code, вручную вне) и модели среды по /cost'
+  changed:
+  - AGENTS.md
+- updated_at: '2026-11-13T23:02:54+03:00'
+  reason: 'удобство: запуск без терминала, строка прогресса, команды'
+  changed:
+  - AGENTS.md
+- updated_at: '2026-11-13T23:06:28+03:00'
+  reason: 'правки ревью: py -m venv'
+  changed:
+  - AGENTS.md
+- updated_at: '2026-11-13T23:09:24+03:00'
+  reason: 'удобство: панель проекта в AGENTS.md; ensure_venv в check.py и lock.py'
+  changed:
+  - AGENTS.md
+  - tools/check.py
+  - tools/lock.py
